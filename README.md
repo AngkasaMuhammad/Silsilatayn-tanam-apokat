@@ -19,9 +19,13 @@ Abaikan kain hitam, hasil belajar rigging di Blender 4.3, sayang kalo dihapus.
 Silakan play animasinya [Poly Landhep v4.2 - Silsilatayn tanam apokat](https://angkasamuhammad.github.io/Silsilatayn-tanam-apokat/Silsilatayn%20tanam%20apokat.html?resource=reso.json&encoder=https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/enco.json&controller=https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/cont.json)  
 
   
-Silakan edit warna baju characternya:
-- Download ZIP repo ini
-- Buka ```Silsilatayn tanam apokat.html``` dengan url parameter
+Silakan utakatik file ```reso.json``` dan ```wgpumod.wgsl``` di local server:
+1. Download ZIP repo ini.
+2. Buka ```Silsilatayn tanam apokat.html``` dengan url parameter
 ```url
 ?resource=reso.json&encoder=https://angkasamuhammad.github.io/Poly-Landhep/Poly Landhep/asset4.1/cobaarmV1/enco.json&controller=https://angkasamuhammad.github.io/Poly-Landhep/Poly Landhep/asset4.1/cobaarmV1/cont.json
 ```
+
+Utakatik warna baju character:
+1. Edit wgpumod.wgsl
+2. Find ```EDITWARNA```
