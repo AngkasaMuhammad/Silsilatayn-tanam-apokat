@@ -21,4 +21,7 @@ Silakan play animasinya [Poly Landhep v4.2 - Silsilatayn tanam apokat](https://a
   
 Silakan edit warna baju characternya:
 - Download ZIP repo ini
-- Buka Silsilatayn tanam apokat.html dengan url parameter ```?resource=reso.json&encoder=https://angkasamuhammad.github.io/Poly-Landhep/Poly Landhep/asset4.1/cobaarmV1/enco.json&controller=https://angkasamuhammad.github.io/Poly-Landhep/Poly ```Landhep/asset4.1/cobaarmV1/cont.json
+- Buka Silsilatayn tanam apokat.html dengan url parameter
+```url
+?resource=reso.json&encoder=https://angkasamuhammad.github.io/Poly-Landhep/Poly Landhep/asset4.1/cobaarmV1/enco.json&controller=https://angkasamuhammad.github.io/Poly-Landhep/Poly Landhep/asset4.1/cobaarmV1/cont.json
+```
