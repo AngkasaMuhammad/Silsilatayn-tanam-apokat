@@ -16,7 +16,7 @@ Belah apokat slow motion:
   
 Abaikan kain hitam, hasil belajar rigging di Blender 4.3, sayang kalo dihapus.  
   
-Silakan play animasinya [Poly Landhep v4.2 - Silsilatayn tanam apokat](https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/v4.2/Poly%20Landhep%20v4.2.html?resource=../asset4.1/cobaarmV1/reso.json&encoder=../asset4.1/cobaarmV1/enco.json&controller=../asset4.1/cobaarmV1/cont.json)  
+Silakan play animasinya [Poly Landhep v4.2 - Silsilatayn tanam apokat]([https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/v4.2/Poly%20Landhep%20v4.2.html?resource=../asset4.1/cobaarmV1/reso.json&encoder=../asset4.1/cobaarmV1/enco.json&controller=../asset4.1/cobaarmV1/cont.json](https://angkasamuhammad.github.io/Silsilatayn-tanam-apokat/Silsilatayn%20tanam%20apokat.html?resource=reso.json&encoder=https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/enco.json&controller=https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/cont.json))  
 
   
 Silakan edit warna baju characternya:
