@@ -5,7 +5,7 @@ Animasi seorang petarung disuruh tanam biji apokat yang dislepet pake rantai bun
 ![gambar utama1](https://raw.githubusercontent.com/AngkasaMuhammad/Poly-Landhep/refs/heads/main/Poly%20Landhep/asset4.1/cobaarmV1/Silsilatayn%20tanam%20apokat.png)  
   
 #### Repo ini dibikin untuk menampung like/bintang/love/⭐⭐  
-Project aslinya disimpan di folder di repo yg sudah ada:
+Project aslinya disimpan di folder di repo yg sudah ada (Poly Landhep v4.2):
 - Asset Animasi [Silsilatayn tanam apokat](https://github.com/AngkasaMuhammad/Poly-Landhep/tree/main/Poly%20Landhep/asset4.1/cobaarmV1)  
 - 3D Engine [Poly Landhep v4.2](https://github.com/AngkasaMuhammad/Poly-Landhep/tree/main)  
   
