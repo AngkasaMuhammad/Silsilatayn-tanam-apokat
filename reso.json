@@ -1,0 +1,1467 @@
+{
+	"create": {
+		"deptex": {
+			"type": "gpu_texture",
+			"descriptor": {
+				"label": "this is depth texture",
+				"size": "(canvas)",
+				"format": "depth24plus",
+				"usage": 16
+			},
+			"data": null
+		},
+		"deptexview": {
+			"type": "gpu_texture_view",
+			"descriptor": {
+				"label": "this is depth tex view"
+			},
+			"data": "deptex"
+		},
+		"miscreso": {
+			"type": "gpu_buffer_binding",
+			"descriptor": {
+				"buffer": "(misc)"
+			}
+		},
+		"mod": {
+			"type": "gpu_shader_module",
+			"descriptor": {
+				"label": "ini module",
+				"code": "wgpumod.wgsl"
+			}
+		},
+		"final indr": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 680,
+				"usage": 268,
+				"label": "ini final indrrrrrrrrr"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/final indirect.bin"
+		},
+		"_bufkosong": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 0,
+				"usage": 44,
+				"label": "koosoonnggg"
+			},
+			"data": "data:,"
+		},
+		"ANImod": {
+			"type": "gpu_shader_module",
+			"descriptor": {
+				"label": "ini ani module",
+				"code": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/ANImod.wgsl"
+			}
+		},
+		"ANIpipe": {
+			"type": "gpu_render_pipe",
+			"descriptor": {
+				"depthStencil": {
+					"depthCompare": "always",
+					"depthWriteEnabled": true,
+					"format": "depth24plus"
+				},
+				"fragment": {
+					"targets": [
+						{
+							"format": "(preferred_canvas_format)",
+							"blend": {
+								"alpha": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "one"
+								},
+								"color": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "src-alpha"
+								}
+							}
+						}
+					],
+					"module": "ANImod"
+				},
+				"label": "ini pipe ANI",
+				"layout": "auto",
+				"primitive": {
+					"cullMode": "none",
+					"topology": "point-list"
+				},
+				"vertex": {
+					"module": "ANImod",
+					"buffers": [
+						{
+							"arrayStride": 68,
+							"stepMode": "vertex",
+							"attributes": [
+								{
+									"shaderLocation": 0,
+									"format": "float32",
+									"offset": 0
+								},
+								{
+									"shaderLocation": 1,
+									"format": "float32x4",
+									"offset": 4
+								},
+								{
+									"shaderLocation": 2,
+									"format": "float32x4",
+									"offset": 20
+								},
+								{
+									"shaderLocation": 3,
+									"format": "float32x4",
+									"offset": 36
+								},
+								{
+									"shaderLocation": 4,
+									"format": "float32x4",
+									"offset": 52
+								}
+							]
+						},
+						{
+							"arrayStride": 68,
+							"stepMode": "vertex",
+							"attributes": [
+								{
+									"shaderLocation": 5,
+									"format": "float32",
+									"offset": 0
+								},
+								{
+									"shaderLocation": 6,
+									"format": "float32x4",
+									"offset": 4
+								},
+								{
+									"shaderLocation": 7,
+									"format": "float32x4",
+									"offset": 20
+								},
+								{
+									"shaderLocation": 8,
+									"format": "float32x4",
+									"offset": 36
+								},
+								{
+									"shaderLocation": 9,
+									"format": "float32x4",
+									"offset": 52
+								}
+							]
+						},
+						{
+							"arrayStride": 68,
+							"stepMode": "vertex",
+							"attributes": [
+								{
+									"shaderLocation": 10,
+									"format": "float32",
+									"offset": 0
+								},
+								{
+									"shaderLocation": 11,
+									"format": "float32x4",
+									"offset": 4
+								},
+								{
+									"shaderLocation": 12,
+									"format": "float32x4",
+									"offset": 20
+								},
+								{
+									"shaderLocation": 13,
+									"format": "float32x4",
+									"offset": 36
+								},
+								{
+									"shaderLocation": 14,
+									"format": "float32x4",
+									"offset": 52
+								}
+							]
+						}
+					]
+				}
+			}
+		},
+		"armmod": {
+			"type": "gpu_shader_module",
+			"descriptor": {
+				"label": "ini arm module",
+				"code": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/armmod.wgsl"
+			}
+		},
+		"armpipe": {
+			"type": "gpu_render_pipe",
+			"descriptor": {
+				"depthStencil": {
+					"depthCompare": "always",
+					"depthWriteEnabled": true,
+					"format": "depth24plus"
+				},
+				"fragment": {
+					"targets": [
+						{
+							"format": "(preferred_canvas_format)",
+							"blend": {
+								"alpha": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "one"
+								},
+								"color": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "src-alpha"
+								}
+							}
+						}
+					],
+					"module": "armmod",
+					"entryPoint": "fragfun"
+				},
+				"label": "armature pipe",
+				"layout": "auto",
+				"primitive": {
+					"cullMode": "none",
+					"topology": "point-list"
+				},
+				"vertex": {
+					"module": "armmod",
+					"entryPoint": "vertfun",
+					"buffers": [
+						{
+							"arrayStride": 0,
+							"stepMode": "vertex",
+							"attributes": []
+						},
+						{
+							"arrayStride": 0,
+							"stepMode": "instance",
+							"attributes": []
+						}
+					]
+				}
+			}
+		},
+		"tanahpipe": {
+			"type": "gpu_render_pipe",
+			"descriptor": {
+				"depthStencil": {
+					"depthCompare": "greater",
+					"depthWriteEnabled": true,
+					"format": "depth24plus"
+				},
+				"fragment": {
+					"targets": [
+						{
+							"format": "(preferred_canvas_format)",
+							"blend": {
+								"alpha": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "one"
+								},
+								"color": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "src-alpha"
+								}
+							}
+						}
+					],
+					"module": "mod",
+					"entryPoint": "tanah_frag"
+				},
+				"label": "tanah pipe",
+				"layout": "auto",
+				"primitive": {
+					"cullMode": "back",
+					"topology": "triangle-list"
+				},
+				"vertex": {
+					"module": "mod",
+					"entryPoint": "tanah_vert",
+					"buffers": [
+						{
+							"arrayStride": 12,
+							"stepMode": "vertex",
+							"attributes": [
+								{
+									"shaderLocation": 0,
+									"format": "float32x3",
+									"offset": 0
+								}
+							]
+						},
+						{
+							"arrayStride": 0,
+							"stepMode": "instance",
+							"attributes": []
+						}
+					]
+				}
+			}
+		},
+		"tanahv": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 48,
+				"usage": 44,
+				"label": "iinniii tanah v"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/tanah/vertex.bin"
+		},
+		"tanahi": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 12,
+				"usage": 28,
+				"label": "inii tanah i"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/tanah/index.bin"
+		},
+		"tanahbind": {
+			"type": "gpu_bind_group",
+			"descriptor": {
+				"entries": [
+					{
+						"binding": 0,
+						"resource": "miscreso"
+					},
+					{
+						"binding": 3,
+						"resource": "camreso"
+					}
+				],
+				"label": "ini bind tanah",
+				"layout": {
+					"layout": 0,
+					"pipe": "tanahpipe"
+				}
+			}
+		},
+		"panahpipe": {
+			"type": "gpu_render_pipe",
+			"descriptor": {
+				"depthStencil": {
+					"depthCompare": "greater",
+					"depthWriteEnabled": true,
+					"format": "depth24plus"
+				},
+				"fragment": {
+					"targets": [
+						{
+							"format": "(preferred_canvas_format)",
+							"blend": {
+								"alpha": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "one"
+								},
+								"color": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "src-alpha"
+								}
+							}
+						}
+					],
+					"module": "mod",
+					"entryPoint": "panah_frag"
+				},
+				"label": "panah pipe",
+				"layout": "auto",
+				"primitive": {
+					"cullMode": "back",
+					"topology": "triangle-list"
+				},
+				"vertex": {
+					"module": "mod",
+					"entryPoint": "panah_vert",
+					"buffers": [
+						{
+							"arrayStride": 12,
+							"stepMode": "vertex",
+							"attributes": [
+								{
+									"shaderLocation": 0,
+									"format": "float32x3",
+									"offset": 0
+								}
+							]
+						},
+						{
+							"arrayStride": 0,
+							"stepMode": "instance",
+							"attributes": []
+						}
+					]
+				}
+			}
+		},
+		"panahv": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 456,
+				"usage": 44,
+				"label": "ini panah v"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/panah/vertex.bin"
+		},
+		"panahi": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 432,
+				"usage": 28,
+				"label": "iniii panah i"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/panah/index.bin"
+		},
+		"panahbind": {
+			"type": "gpu_bind_group",
+			"descriptor": {
+				"entries": [
+					{
+						"binding": 0,
+						"resource": "miscreso"
+					},
+					{
+						"binding": 3,
+						"resource": "camreso"
+					}
+				],
+				"label": "ini bind panah",
+				"layout": {
+					"layout": 0,
+					"pipe": "panahpipe"
+				}
+			}
+		},
+		"b panah ani": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 1904,
+				"usage": 44,
+				"label": "buf animasi panah"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/panah/ani.bin"
+		},
+		"kain0pipe": {
+			"type": "gpu_render_pipe",
+			"descriptor": {
+				"depthStencil": {
+					"depthCompare": "greater",
+					"depthWriteEnabled": true,
+					"format": "depth24plus"
+				},
+				"fragment": {
+					"targets": [
+						{
+							"format": "(preferred_canvas_format)",
+							"blend": {
+								"alpha": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "one"
+								},
+								"color": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "src-alpha"
+								}
+							}
+						}
+					],
+					"module": "mod",
+					"entryPoint": "kain0_frag"
+				},
+				"label": "kain0 pipe",
+				"layout": "auto",
+				"primitive": {
+					"cullMode": "back",
+					"topology": "triangle-list"
+				},
+				"vertex": {
+					"module": "mod",
+					"entryPoint": "kain0_vert",
+					"buffers": [
+						{
+							"arrayStride": 20,
+							"stepMode": "vertex",
+							"attributes": [
+								{
+									"shaderLocation": 0,
+									"format": "uint8x4",
+									"offset": 0
+								},
+								{
+									"shaderLocation": 1,
+									"format": "unorm8x4",
+									"offset": 4
+								},
+								{
+									"shaderLocation": 2,
+									"format": "float32x3",
+									"offset": 8
+								}
+							]
+						},
+						{
+							"arrayStride": 0,
+							"stepMode": "instance",
+							"attributes": []
+						}
+					]
+				}
+			}
+		},
+		"kain0v": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 1380,
+				"usage": 44,
+				"label": "ini kain0 v"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/kain0/vertex.bin"
+		},
+		"kain0i": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 528,
+				"usage": 28,
+				"label": "iniii kain0 i"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/kain0/index.bin"
+		},
+		"kain0locani": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 320,
+				"usage": 140,
+				"label": "iniiii kain0 locani"
+			},
+			"data": "data:,"
+		},
+		"kain0invglo": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 320,
+				"usage": 140,
+				"label": "ini kain0 invglo"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/kain0/invglo.bin"
+		},
+		"kain0par": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 256,
+				"usage": 76,
+				"label": "ini kain0 parent"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/kain0/parent.bin"
+		},
+		"kain0glo": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 320,
+				"usage": 140,
+				"label": "ini kain0 glo"
+			},
+			"data": "data:,"
+		},
+		"kain0ani": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 3332,
+				"usage": 44,
+				"label": "buf animasi kain0"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/kain0/ani.bin"
+		},
+		"kain0 locanireso": {
+			"type": "gpu_buffer_binding",
+			"descriptor": {
+				"buffer": "kain0locani"
+			}
+		},
+		"kain0 invgloreso": {
+			"type": "gpu_buffer_binding",
+			"descriptor": {
+				"buffer": "kain0invglo"
+			}
+		},
+		"kain0 parreso": {
+			"type": "gpu_buffer_binding",
+			"descriptor": {
+				"buffer": "kain0par"
+			}
+		},
+		"kain0 gloreso": {
+			"type": "gpu_buffer_binding",
+			"descriptor": {
+				"buffer": "kain0glo"
+			}
+		},
+		"kain0bind": {
+			"type": "gpu_bind_group",
+			"descriptor": {
+				"entries": [
+					{
+						"binding": 0,
+						"resource": "miscreso"
+					},
+					{
+						"binding": 3,
+						"resource": "camreso"
+					},
+					{
+						"binding": 4,
+						"resource": "kain0 gloreso"
+					}
+				],
+				"label": "ini bind kain0",
+				"layout": {
+					"layout": 0,
+					"pipe": "kain0pipe"
+				}
+			}
+		},
+		"kain0 anibind": {
+			"type": "gpu_bind_group",
+			"descriptor": {
+				"entries": [
+					{
+						"binding": 0,
+						"resource": "kain0 locanireso"
+					},
+					{
+						"binding": 1,
+						"resource": "miscreso"
+					}
+				],
+				"label": "ini bind kain0 ani",
+				"layout": {
+					"layout": 0,
+					"pipe": "ANIpipe"
+				}
+			}
+		},
+		"kain0 armbind": {
+			"type": "gpu_bind_group",
+			"descriptor": {
+				"entries": [
+					{
+						"binding": 0,
+						"resource": "kain0 parreso"
+					},
+					{
+						"binding": 1,
+						"resource": "kain0 invgloreso"
+					},
+					{
+						"binding": 2,
+						"resource": "kain0 locanireso"
+					},
+					{
+						"binding": 3,
+						"resource": "kain0 gloreso"
+					}
+				],
+				"label": "ini bind kain0 arm",
+				"layout": {
+					"layout": 0,
+					"pipe": "armpipe"
+				}
+			}
+		},
+		"chara0pipe": {
+			"type": "gpu_render_pipe",
+			"descriptor": {
+				"depthStencil": {
+					"depthCompare": "greater",
+					"depthWriteEnabled": true,
+					"format": "depth24plus"
+				},
+				"fragment": {
+					"targets": [
+						{
+							"format": "(preferred_canvas_format)",
+							"blend": {
+								"alpha": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "one"
+								},
+								"color": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "src-alpha"
+								}
+							}
+						}
+					],
+					"module": "mod",
+					"entryPoint": "chara0_frag"
+				},
+				"label": "chara0 pipe",
+				"layout": "auto",
+				"primitive": {
+					"cullMode": "back",
+					"topology": "triangle-list"
+				},
+				"vertex": {
+					"module": "mod",
+					"entryPoint": "chara0_vert",
+					"buffers": [
+						{
+							"arrayStride": 28,
+							"stepMode": "vertex",
+							"attributes": [
+								{
+									"shaderLocation": 0,
+									"format": "uint8x4",
+									"offset": 0
+								},
+								{
+									"shaderLocation": 1,
+									"format": "unorm8x4",
+									"offset": 4
+								},
+								{
+									"shaderLocation": 2,
+									"format": "float32x3",
+									"offset": 8
+								},
+								{
+									"shaderLocation": 3,
+									"format": "float32x2",
+									"offset": 20
+								}
+							]
+						},
+						{
+							"arrayStride": 0,
+							"stepMode": "instance",
+							"attributes": []
+						}
+					]
+				}
+			}
+		},
+		"chara0v": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 35728,
+				"usage": 44,
+				"label": "ini chara0 v"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/chara0/vertex.bin"
+		},
+		"chara0i": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 14280,
+				"usage": 28,
+				"label": "iniii chara0 i"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/chara0/index.bin"
+		},
+		"chara0locani": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 1152,
+				"usage": 140,
+				"label": "iniiii chara0 locani"
+			},
+			"data": "data:,"
+		},
+		"chara0invglo": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 1152,
+				"usage": 140,
+				"label": "ini chara0 invglo"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/chara0/invglo.bin"
+		},
+		"chara0par": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 256,
+				"usage": 76,
+				"label": "ini chara0 parent"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/chara0/parent.bin"
+		},
+		"chara0glo": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 1152,
+				"usage": 140,
+				"label": "ini chara0 glo"
+			},
+			"data": "data:,"
+		},
+		"chara0ani": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 59228,
+				"usage": 44,
+				"label": "buf animasi chara0"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/chara0/ani.bin"
+		},
+		"chara0 locanireso": {
+			"type": "gpu_buffer_binding",
+			"descriptor": {
+				"buffer": "chara0locani"
+			}
+		},
+		"chara0 invgloreso": {
+			"type": "gpu_buffer_binding",
+			"descriptor": {
+				"buffer": "chara0invglo"
+			}
+		},
+		"chara0 parreso": {
+			"type": "gpu_buffer_binding",
+			"descriptor": {
+				"buffer": "chara0par"
+			}
+		},
+		"chara0 gloreso": {
+			"type": "gpu_buffer_binding",
+			"descriptor": {
+				"buffer": "chara0glo"
+			}
+		},
+		"chara0bind": {
+			"type": "gpu_bind_group",
+			"descriptor": {
+				"entries": [
+					{
+						"binding": 0,
+						"resource": "miscreso"
+					},
+					{
+						"binding": 3,
+						"resource": "camreso"
+					},
+					{
+						"binding": 4,
+						"resource": "chara0 gloreso"
+					}
+				],
+				"label": "ini bind chara0",
+				"layout": {
+					"layout": 0,
+					"pipe": "chara0pipe"
+				}
+			}
+		},
+		"chara0 anibind": {
+			"type": "gpu_bind_group",
+			"descriptor": {
+				"entries": [
+					{
+						"binding": 0,
+						"resource": "chara0 locanireso"
+					},
+					{
+						"binding": 1,
+						"resource": "miscreso"
+					}
+				],
+				"label": "ini bind chara0 ani",
+				"layout": {
+					"layout": 0,
+					"pipe": "ANIpipe"
+				}
+			}
+		},
+		"chara0 armbind": {
+			"type": "gpu_bind_group",
+			"descriptor": {
+				"entries": [
+					{
+						"binding": 0,
+						"resource": "chara0 parreso"
+					},
+					{
+						"binding": 1,
+						"resource": "chara0 invgloreso"
+					},
+					{
+						"binding": 2,
+						"resource": "chara0 locanireso"
+					},
+					{
+						"binding": 3,
+						"resource": "chara0 gloreso"
+					}
+				],
+				"label": "ini bind chara0 arm",
+				"layout": {
+					"layout": 0,
+					"pipe": "armpipe"
+				}
+			}
+		},
+		"subtitlepipe": {
+			"type": "gpu_render_pipe",
+			"descriptor": {
+				"depthStencil": {
+					"depthCompare": "greater",
+					"depthWriteEnabled": true,
+					"format": "depth24plus"
+				},
+				"fragment": {
+					"targets": [
+						{
+							"format": "(preferred_canvas_format)",
+							"blend": {
+								"alpha": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "one"
+								},
+								"color": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "src-alpha"
+								}
+							}
+						}
+					],
+					"module": "mod",
+					"entryPoint": "subtitle_frag"
+				},
+				"label": "subtitle pipe",
+				"layout": "auto",
+				"primitive": {
+					"cullMode": "back",
+					"topology": "triangle-list"
+				},
+				"vertex": {
+					"module": "mod",
+					"entryPoint": "subtitle_vert",
+					"buffers": [
+						{
+							"arrayStride": 20,
+							"stepMode": "vertex",
+							"attributes": [
+								{
+									"shaderLocation": 0,
+									"format": "float32",
+									"offset": 0
+								},
+								{
+									"shaderLocation": 1,
+									"format": "float32",
+									"offset": 4
+								},
+								{
+									"shaderLocation": 2,
+									"format": "float32x3",
+									"offset": 8
+								}
+							]
+						},
+						{
+							"arrayStride": 0,
+							"stepMode": "instance",
+							"attributes": []
+						}
+					]
+				}
+			}
+		},
+		"subtitlev": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 46800,
+				"usage": 44,
+				"label": "ini subtitle v"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/subtitle/vertex.bin"
+		},
+		"subtitlei": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 13152,
+				"usage": 28,
+				"label": "iniii subtitle i"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/subtitle/index.bin"
+		},
+		"subtitlebind": {
+			"type": "gpu_bind_group",
+			"descriptor": {
+				"entries": [
+					{
+						"binding": 0,
+						"resource": "miscreso"
+					}
+				],
+				"label": "ini bind subtitle",
+				"layout": {
+					"layout": 0,
+					"pipe": "subtitlepipe"
+				}
+			}
+		},
+		"bungapipe": {
+			"type": "gpu_render_pipe",
+			"descriptor": {
+				"depthStencil": {
+					"depthCompare": "greater",
+					"depthWriteEnabled": true,
+					"format": "depth24plus"
+				},
+				"fragment": {
+					"targets": [
+						{
+							"format": "(preferred_canvas_format)",
+							"blend": {
+								"alpha": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "one"
+								},
+								"color": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "src-alpha"
+								}
+							}
+						}
+					],
+					"module": "mod",
+					"entryPoint": "bunga_frag"
+				},
+				"label": "bunga pipe",
+				"layout": "auto",
+				"primitive": {
+					"cullMode": "back",
+					"topology": "triangle-list"
+				},
+				"vertex": {
+					"module": "mod",
+					"entryPoint": "bunga_vert",
+					"buffers": [
+						{
+							"arrayStride": 16,
+							"stepMode": "vertex",
+							"attributes": [
+								{
+									"shaderLocation": 0,
+									"format": "unorm8x4",
+									"offset": 0
+								},
+								{
+									"shaderLocation": 1,
+									"format": "float32x3",
+									"offset": 4
+								}
+							]
+						},
+						{
+							"arrayStride": 16,
+							"stepMode": "instance",
+							"attributes": [
+								{
+									"shaderLocation": 2,
+									"format": "float32",
+									"offset": 0
+								},
+								{
+									"shaderLocation": 3,
+									"format": "float32x3",
+									"offset": 4
+								}
+							]
+						}
+					]
+				}
+			}
+		},
+		"bungainst": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 12432,
+				"usage": 44,
+				"label": "ini bunga inst"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/bunga/instance.bin"
+		},
+		"bungav": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 3136,
+				"usage": 44,
+				"label": "ini bunga v"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/bunga/vertex.bin"
+		},
+		"bungai": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 2184,
+				"usage": 28,
+				"label": "iniii bunga i"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/bunga/index.bin"
+		},
+		"bungabind": {
+			"type": "gpu_bind_group",
+			"descriptor": {
+				"entries": [
+					{
+						"binding": 0,
+						"resource": "miscreso"
+					},
+					{
+						"binding": 3,
+						"resource": "camreso"
+					}
+				],
+				"label": "ini bind bunga",
+				"layout": {
+					"layout": 0,
+					"pipe": "bungapipe"
+				}
+			}
+		},
+		"duarpipe": {
+			"type": "gpu_render_pipe",
+			"descriptor": {
+				"depthStencil": {
+					"depthCompare": "greater",
+					"depthWriteEnabled": true,
+					"format": "depth24plus"
+				},
+				"fragment": {
+					"targets": [
+						{
+							"format": "(preferred_canvas_format)",
+							"blend": {
+								"alpha": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "one"
+								},
+								"color": {
+									"dstFactor": "one-minus-src-alpha",
+									"operation": "add",
+									"srcFactor": "src-alpha"
+								}
+							}
+						}
+					],
+					"module": "mod",
+					"entryPoint": "duar_frag"
+				},
+				"label": "duar pipe",
+				"layout": "auto",
+				"primitive": {
+					"cullMode": "back",
+					"topology": "triangle-list"
+				},
+				"vertex": {
+					"module": "mod",
+					"entryPoint": "duar_vert",
+					"buffers": [
+						{
+							"arrayStride": 12,
+							"stepMode": "vertex",
+							"attributes": [
+								{
+									"shaderLocation": 0,
+									"format": "float32x3",
+									"offset": 0
+								}
+							]
+						},
+						{
+							"arrayStride": 0,
+							"stepMode": "instance",
+							"attributes": []
+						}
+					]
+				}
+			}
+		},
+		"duarv": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 1332,
+				"usage": 44,
+				"label": "ini duar v"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/duar/vertex.bin"
+		},
+		"duari": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 1200,
+				"usage": 28,
+				"label": "iniii duar i"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/duar/index.bin"
+		},
+		"duarbind": {
+			"type": "gpu_bind_group",
+			"descriptor": {
+				"entries": [
+					{
+						"binding": 0,
+						"resource": "miscreso"
+					},
+					{
+						"binding": 3,
+						"resource": "camreso"
+					}
+				],
+				"label": "ini bind duar",
+				"layout": {
+					"layout": 0,
+					"pipe": "duarpipe"
+				}
+			}
+		},
+		"CAM_bCAM ani": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 5440,
+				"usage": 44,
+				"label": "buf animasi camera"
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/cam/ani.bin"
+		},
+		"CAManiloc": {
+			"type": "gpu_buffer",
+			"descriptor": {
+				"size": 128,
+				"usage": 140,
+				"label": "cam output"
+			},
+			"data": "data:,"
+		},
+		"camreso": {
+			"type": "gpu_buffer_binding",
+			"descriptor": {
+				"buffer": "CAManiloc"
+			}
+		},
+		"CAM_bCAM anibind": {
+			"type": "gpu_bind_group",
+			"descriptor": {
+				"entries": [
+					{
+						"binding": 0,
+						"resource": "camreso"
+					},
+					{
+						"binding": 1,
+						"resource": "miscreso"
+					}
+				],
+				"label": "ini bind cam",
+				"layout": {
+					"layout": 0,
+					"pipe": "ANIpipe"
+				}
+			}
+		},
+		"suara tolong kupas": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/sound/tolongkupas.m4a",
+			"_attribution": ""
+		},
+		"suara ya pak": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/sound/ggwave ya pak.mp3",
+			"_attribution": ""
+		},
+		"suara kamutanam": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/sound/kamutanam1.m4a",
+			"_attribution": ""
+		},
+		"suara semuakumpul": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/sound/semuakumpul.mp3",
+			"_attribution": ""
+		},
+		"suara dahpak": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/sound/dahpak.mp3",
+			"_attribution": ""
+		},
+		"suara tanamuntukapa": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/sound/tanamuntukapa.mp3",
+			"_attribution": ""
+		},
+		"suara ayunan": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/sound/ayunan.m4a",
+			"_attribution": ""
+		},
+		"suara ayunan1": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/sound/ayunan1.mp3",
+			"_attribution": ""
+		},
+		"suara ayun": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://cdn.freesound.org/previews/733/733890_6703998-lq.mp3",
+			"_attribution": "Whoosh 03 by velcronator -- https://freesound.org/s/733890/ -- License: Creative Commons 0"
+		},
+		"suara besi0": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://cdn.freesound.org/previews/699/699940_10996917-lq.mp3",
+			"_attribution": "Best_custom_sword_hit_w_ringouts_2.5_12262022.mp3 by Artninja -- https://freesound.org/s/699940/ -- License: Attribution 4.0"
+		},
+		"suara besi1": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://cdn.freesound.org/previews/406/406491_5923045-lq.mp3",
+			"_attribution": "hit - metallic - lawn chair 01.wav by Anthousai -- https://freesound.org/s/406491/ -- License: Creative Commons 0"
+		},
+		"suara jatuhlantai0": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://cdn.freesound.org/previews/82/82027_1178110-lq.mp3",
+			"_attribution": "Body Fall Over.wav by raubana -- https://freesound.org/s/82027/ -- License: Creative Commons 0"
+		},
+		"suara angin": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://cdn.freesound.org/previews/546/546759_9250976-lq.mp3",
+			"_attribution": "Ambiance_Wind_Trees_Leaves_Moderate_Loop_Stereo.wav by Nox_Sound -- https://freesound.org/s/546759/ -- License: Creative Commons 0"
+		},
+		"suara besi2": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://cdn.freesound.org/previews/111/111069_1602189-lq.mp3",
+			"_attribution": "SwordDraw.wav by Myuzishin -- https://freesound.org/s/111069/ -- License: Attribution NonCommercial 3.0"
+		},
+		"suara besi3": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://cdn.freesound.org/previews/320/320521_2906614-lq.mp3",
+			"_attribution": "Unsheathed blade by deleted_user_2906614 -- https://freesound.org/s/320521/ -- License: Creative Commons 0"
+		},
+		"suara kipas0": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://cdn.freesound.org/previews/634/634718_7853647-lq.mp3",
+			"_attribution": "fan.ogg by Krosenut -- https://freesound.org/s/634718/ -- License: Creative Commons 0"
+		},
+		"suara step0": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://cdn.freesound.org/previews/223/223153_2792951-lq.mp3",
+			"_attribution": "dirt/gravel footstep 4 by Yoyodaman234 -- https://freesound.org/s/223153/ -- License: Creative Commons 0"
+		},
+		"suara ambil": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/sound/Minecraft - Item Pop (Sound Effect).mp3",
+			"_attribution": ""
+		},
+		"suara lompat": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://cdn.freesound.org/previews/703/703922_15265658-lq.mp3",
+			"_attribution": "cloth1.ogg by cuanmamang -- https://freesound.org/s/703922/ -- License: Creative Commons 0"
+		},
+		"suara kartu": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://cdn.freesound.org/previews/817/817571_15868577-lq.mp3",
+			"_attribution": "shuffle02 by SilverDubloons -- https://freesound.org/s/817571/ -- License: Creative Commons 0"
+		},
+		"suara slepet": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://cdn.freesound.org/previews/529/529925_11751070-lq.mp3",
+			"_attribution": "Whip Crack.m4a by SciFiSounds -- https://freesound.org/s/529925/ -- License: Creative Commons 0"
+		},
+		"suara boom": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://cdn.freesound.org/previews/553/553153_10912485-lq.mp3",
+			"_attribution": "Firework Single ( Explosion ) by EminYILDIRIM -- https://freesound.org/s/553153/ -- License: Attribution 4.0"
+		},
+		"suara metalbar": {
+			"type": "audio_buffer",
+			"descriptor": {
+
+			},
+			"data": "https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/sound/metal-bar.mp3",
+			"_attribution": "Dari https://www.myinstants.com/en/instant/metal-bar-87413/"
+		}
+	}
+}
