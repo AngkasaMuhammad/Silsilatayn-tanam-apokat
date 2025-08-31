@@ -3,7 +3,7 @@
 Animasi seorang petarung disuruh tanam biji apokat yang dislepet pake rantai bunga  
   
   
-### Silakan play animasinya dengan click link atau gambar di bawah  
+### [Silakan play animasinya dengan click link atau gambar di bawah  ](https://github.com/)
 
 [Poly Landhep v4.2 - Silsilatayn tanam apokat  
 ![gambar utama1](https://raw.githubusercontent.com/AngkasaMuhammad/Poly-Landhep/refs/heads/main/Poly%20Landhep/asset4.1/cobaarmV1/Silsilatayn%20tanam%20apokat.png)  
