@@ -4,7 +4,9 @@ Animasi seorang petarung disuruh tanam biji apokat yang dislepet pake rantai bun
   
   
 ### Silakan play animasinya dengan click link atau gambar di bawah  
-[Poly Landhep v4.2 - Silsilatayn tanam apokat  
+
+[https://cdn-icons-png.flaticon.com/512/0/375.png  
+Poly Landhep v4.2 - Silsilatayn tanam apokat  
 ![gambar utama1](https://raw.githubusercontent.com/AngkasaMuhammad/Poly-Landhep/refs/heads/main/Poly%20Landhep/asset4.1/cobaarmV1/Silsilatayn%20tanam%20apokat.png)  
 ](https://angkasamuhammad.github.io/Silsilatayn-tanam-apokat/Silsilatayn%20tanam%20apokat.html?resource=reso.json&encoder=https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/enco.json&controller=https://angkasamuhammad.github.io/Poly-Landhep/Poly%20Landhep/asset4.1/cobaarmV1/cont.json)  
   
