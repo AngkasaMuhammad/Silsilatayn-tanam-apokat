@@ -18,7 +18,8 @@ Belah apokat slow motion:
 - Speed: 0.003
   
 
-  
+
+### Bagi yang mau utakatik warna baju, dan lainlain  
 Silakan utakatik file ```reso.json``` dan ```wgpumod.wgsl``` di local server:
 1. Download ZIP repo ini.
 2. Buka ```Silsilatayn tanam apokat.html``` dengan url parameter
